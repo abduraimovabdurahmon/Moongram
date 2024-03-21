@@ -26,6 +26,7 @@ const createWindow = async () => {
     // open browser
     win.loadURL('https://web.telegram.org/k/');
 
+
     // change window title
     win.on('page-title-updated', (e, title) => {
         e.preventDefault();
@@ -36,7 +37,7 @@ const createWindow = async () => {
     // show notification
     new Notification({
         title: "Moongram",
-        body: "Moongram ishga tushdi!"
+        body: "Moongram ishga tushdi 🚀🚀🚀",
     }).show()
 
 
@@ -49,7 +50,7 @@ const createWindow = async () => {
         setTimeout(() => {
             new Notification({
                 title: "Moongram",
-                body: "Script yuklandi!",
+                body: "Script yuklandi ✅",
 
             }).show();
         }
@@ -60,7 +61,7 @@ const createWindow = async () => {
         setTimeout(() => {
             new Notification({
                 title: "Moongram",
-                body: "Script yuklanmadi!",
+                body: "Script yuklanmadi ❌",
 
             }).show();
         }
@@ -76,7 +77,7 @@ const createWindow = async () => {
 
         new Notification({
             title: "Moongram",
-            body: "Dastur to'liq ishga tushdi🥳🥳🥳",
+            body: "Dastur to'liq ishga tushdi 🥳🥳🥳",
             closeButtonText: "Yopish",
         }).show();
     }, 5000);
@@ -86,7 +87,7 @@ const createWindow = async () => {
     setTimeout(() => {
         new Notification({
             title: "Moongram",
-            body: "Created by Abdurakhmon",
+            body: "Created by Abdurakhmon 🖌️",
             closeButtonText: "Yopish",
         }).show();
     }, 8000);
@@ -96,6 +97,7 @@ const createWindow = async () => {
     // change placeholder
     win.webContents.executeJavaScript(`
         const myInterval = setInterval(() => {
+
 
             if(document.querySelector(".input-search-placeholder").innerText.includes("Created by Abdurakhmon")){
                 clearInterval(myInterval);
