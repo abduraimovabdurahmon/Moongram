@@ -49,7 +49,8 @@ const createWindow = async () => {
         setTimeout(() => {
             new Notification({
                 title: "Moongram",
-                body: "Script yuklandi!"
+                body: "Script yuklandi!",
+
             }).show();
         }
             , 2000);
@@ -59,7 +60,8 @@ const createWindow = async () => {
         setTimeout(() => {
             new Notification({
                 title: "Moongram",
-                body: "Script yuklanmadi!"
+                body: "Script yuklanmadi!",
+
             }).show();
         }
             , 2000);
@@ -75,7 +77,7 @@ const createWindow = async () => {
         new Notification({
             title: "Moongram",
             body: "Dastur to'liq ishga tushdi🥳🥳🥳",
-            closeButtonText: "Yopish"
+            closeButtonText: "Yopish",
         }).show();
     }, 5000);
 
@@ -85,7 +87,7 @@ const createWindow = async () => {
         new Notification({
             title: "Moongram",
             body: "Created by Abdurakhmon",
-            closeButtonText: "Yopish"
+            closeButtonText: "Yopish",
         }).show();
     }, 8000);
 
@@ -110,5 +112,21 @@ const createWindow = async () => {
 
 
 }
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
+});
+
+
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
+});
+
+
+
 
 app.whenReady().then(createWindow);
