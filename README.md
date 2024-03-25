@@ -1,5 +1,7 @@
-Moongram
-========
+**Moongram**
+---------
+
+https://github.com/abduraimovabdurahmon/Moongram/assets/86264199/b38232f4-2c41-4056-a2fc-6b876a4dca94
 
 For MacOs
 ---------
